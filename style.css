@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay for readability */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: 0;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  width: 380px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-box button {
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #2575fc;
+}
+
+.weather-card img {
+  width: 100px;
+  margin: 15px 0;
+}
+
+.temp {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+}
+
+#description {
+  font-size: 18px;
+  color: #555;
+}
+
+.forecast-title {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #333;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.forecast-card {
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  width: 65px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.forecast-card img {
+  width: 40px;
+}
+
+.forecast-card p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #444;
+}
+
+/* Weather background images */
+.sunny { 
+  background: url("images/backgrounds/sunny.jpg") no-repeat center center/cover; 
+}
+
+.cloudy { 
+  background: url("images/backgrounds/cloudy.jpg") no-repeat center center/cover; 
+}
+
+.rainy { 
+  background: url("images/backgrounds/rainy.jpg") no-repeat center center/cover; 
+}
+
+.snowy { 
+  background: url("images/backgrounds/snowy.jpg") no-repeat center center/cover; 
+}
